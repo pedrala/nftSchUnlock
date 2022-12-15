@@ -26,7 +26,7 @@ public class RewardScheduler {
 			JobDetail joblogparser = JobBuilder.newJob(RewardJobs.class).withIdentity("logparserjobName", Scheduler.DEFAULT_GROUP).requestRecovery(true).build();
 			Trigger triggerlogparser = TriggerBuilder.newTrigger().withIdentity("logparsertrggerName", Scheduler.DEFAULT_GROUP)
 					.withSchedule(CronScheduleBuilder.cronSchedule("0 30 0/1 * * ?")).build();		//한 시간 단위로 스케쥴러를 가동한다. 매시 30분에 실행
-				  //.withSchedule(CronScheduleBuilder.cronSchedule("10 0 0/1 * * * ?")).build();		//테스트를 위하여 초단위로 스케쥴러를 가동한다.
+				  //.withSchedule(CronScheduleBuilder.cronSchedule("10 0 0/1 * * * ?")).build();	//테스트를 위하여 초단위로 스케쥴러를 가동한다.
 			
 			scheduler.scheduleJob(joblogparser, triggerlogparser);
 

@@ -1,5 +1,10 @@
 # nftSchUnlock
 
+# how to execute
+On RewardScheduler folder, Mouse Right Click -> Run As -> Java Application
+Select 'RewardScheduler' on Select Java Application modal window and then click 'OK'
+
+
 get unlocklist from user_wallet.tbl_in
 and send unlocked tokens from i_amount  to v_amount
 
